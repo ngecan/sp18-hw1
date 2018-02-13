@@ -1,15 +1,19 @@
 def squared_sum(a, b)
   # Q1 CODE HERE
+  (a + b) ** 2
 
 end
 
 def sort_array_plus_one(a)
   # Q2 CODE HERE
-
+  a.sort.map do |element|
+  	element + 1
+  end
 end
 
 def combine_name(first_name, last_name)
   # Q3 CODE HERE
+  first_name + " " + last_name
 
 end
 
@@ -49,4 +53,10 @@ def scrabble(word)
     z: 10,
   }
   # Q5 CODE HERE
+  word_as_array = word.split("")
+  points = 0
+  word_as_array.each do |letter|
+    points += values[letter.to_sym]
+  end
+  return points
 end
